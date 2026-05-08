@@ -1,0 +1,16 @@
+{
+  "plugins": {
+    "monokai.nvim": {
+      "rev": "b8bd44d5796503173627d7a1fc51f77ec3a08a63",
+      "src": "https://github.com/tanvirtin/monokai.nvim"
+    },
+    "vim-transparent": {
+      "rev": "7b34267878b985677e2a1209004439972dbcbf8d",
+      "src": "https://github.com/tribela/vim-transparent"
+    },
+    "which-key.nvim": {
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
+      "src": "https://github.com/folke/which-key.nvim"
+    }
+  }
+}
