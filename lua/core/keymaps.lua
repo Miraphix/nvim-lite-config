@@ -1,10 +1,23 @@
 -- map function
 local map = vim.keymap.set
 vim.g.mapleader = '\\'
-local opts = {
-    noremap = true,
-    silent = true
-}
+
+local function mapopts(keydesc)
+    if (keydesc) then
+        return {
+            noremap = true,
+            silent = true,
+            desc = keydesc
+        }
+    else
+        return {
+            noremap = true,
+            silent = true
+        }
+    end
+end
+
+local opts = mapopts(nil)
 
 -- 显示时间喵
 map('n', '<F2>', ":echo '现在时间是' . strftime('%c') . ' 喵~'<CR>", opts)
@@ -74,8 +87,7 @@ map('v', '>', '>gv', opts)
 
 -- 更方便的注释
 -- 终端会把/识别为_，为什么呢()
-map('v', '<leader>/', ':s/^/', opts)
-map('v', '<leader>d', ':s/^.\\{-}\\s//<CR>', opts)
+map('v', '<leader>/', ':s/^/', mapopts('manual comment'))
 
 -- 撤回，保存，HJKL
 map({'n', 'i', 'v'}, '<C-Z>', '<Esc>u')
@@ -89,4 +101,7 @@ map('i', 'jk', '<ESC>')
 map({'n', 'i'}, '<A-f>', '<Esc>:NvimTreeFocus<CR>', opts)
 map({'n', 'i'}, '<A-e>', '<Esc>:NvimTreeToggle<CR>', opts)
 map('n', '<leader>q', ':qa<CR>', opts)
+
+-- Lazygit
+map('n', '<leader>lg', '<cmd>LazyGit<CR>')
 
