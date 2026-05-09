@@ -31,6 +31,9 @@ vim.pack.add({
     gh('nvim-tree/nvim-web-devicons'),
     gh('nvim-treesitter/nvim-treesitter'),
 
+    -- toggleterm
+    gh('akinsho/toggleterm.nvim'),
+
     -- vim-transparent
     gh('tribela/vim-transparent'),
 
