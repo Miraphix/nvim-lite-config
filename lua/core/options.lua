@@ -37,3 +37,4 @@ vim.cmd [[ colo monokai ]]
 
 vim.opt.display:append("uhex")  -- 只在必要时显示十六进制
 
+vim.cmd [[ set guicursor=i:block-iCursor-blinkon0,v:block-vCursor ]]
